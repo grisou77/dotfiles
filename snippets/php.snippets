@@ -1,0 +1,93 @@
+s nippet dockblock
+	/**
+	 * ${1}
+	 */
+snippet dataprovider
+	/** @dataProvider ${1} */
+snippet pubfun
+	public function ${1}()
+	{
+		return ${2};
+	}
+snippet accessors
+	public function set${1}($value)
+	{
+		\$this->${2} = $value;
+
+		return \$this;
+	}
+
+	public function get${3}()
+	{
+		if (\$this->${4}) {
+			return \$this->${4};
+		}
+
+		throw new \RuntimeException(
+			'Oops! ${5}'
+		);
+	}
+snippet assertEquals
+	\$this->assertEquals(
+		
+	);
+snippet test
+	public function test${1}()
+	{
+		\$this->markTestIncomplete();
+	}
+snippet const
+	const ${1} = '${2}';
+snippet export
+	var_export($${1});
+snippet phplog
+	error_log(var_export(${1}, true));
+snippet runtime
+	throw new \RuntimeException(
+		'Oops!'
+	);
+snippet expext
+	$this->${1}->expects($this->${2}())
+		->method('${3}')
+		->with(${4})
+		->will(\$this->returnValue(${5}));
+snippet deprecate
+	/** @deprecate */
+snippet warning
+	/** @warning ${1} */
+snippet todo
+	/** @todo ${1} */
+snippet comment
+	/** ${1} */
+snippet @war
+	@warning ${1}
+snippet @ret
+	@return ${1}
+snippet var
+	/**
+	 * @var ${1}
+	 */
+snippet mock
+	$this->${1} = $this
+	    ->getMockBuilder('${2}')
+		->disableOriginalConstructor()
+		->getMock();
+snippet foreach
+	foreach (\$${1} as \$itemKey => \$itemValue) {
+		
+	}
+snippet dump
+	var_dump(\$${1});
+snippet try
+	try {
+		${1}
+		exit 0;
+	} catch(\RuntimeException $exception) {
+		exit 1;
+	}
+snippet logger
+	$this->logger->info('${1}');
+snippet incomplete
+	$this->markTestIncomplete('${1}');
+snippet skipped
+	$this->markTestSkipped('${1}');
