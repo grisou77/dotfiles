@@ -40,11 +40,5 @@ alias ll='ls -la'
 alias la='ls -A'
 alias l='ls -CF'
 alias ..='cd ..'
-alias dnscacheclear='sudo killall -HUP mDNSResponder'
-alias sshdev='ssh andrea@andrea.youniversalmedia.intra'
-alias sshdev-in='ssh -i ~/.ssh/you_aws_in.pem ubuntu@52.48.17.135'
-alias sshdeploy='ssh -i ~/.ssh/you_aws.pem lorusso@52.213.142.45'
-alias mountdev='sshfs andrea@andrea.youniversalmedia.intra:/home/andrea/site /Users/lorusso/dev'
-alias sshindev='ssh -i ~/.ssh/andrea_at_yncloud andrea@devel.yncloud.intra'
 
 export PATH=$HOME/bin:$PATH
