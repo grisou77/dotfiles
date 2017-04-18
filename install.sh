@@ -18,6 +18,7 @@ fi
 . ./update-vimrc.sh
 . ./update-snippets.sh
 . ./update-bash_aliases.sh
+. ./update-bash_profile.sh
 . ./update-colorscheme.sh
 
 
